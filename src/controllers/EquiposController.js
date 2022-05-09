@@ -187,9 +187,7 @@ function tablaLiga(req, res) {
 }
 
 
-
-
-/* function generarReporte(req, res) {
+function generarReporte(req, res) {
     var idUsuario;
 
     if (req.params.liga == null) return res.status(500).send({ error: "debe enviar el nombre de que liga quiere generar su reporte" })
@@ -220,7 +218,7 @@ function tablaLiga(req, res) {
             }).sort({ puntos: -1 })
         }
     })
-} */
+}
 
 function generarPdf(nombreLiga, equipos) {
 
@@ -275,7 +273,6 @@ function generarPdf(nombreLiga, equipos) {
 
 
     content.push({
-        /* layout: 'lightHorizontalLines', */
         layout: {
             fillColor: function (rowIndex, node, columnIndex) {
                 return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
@@ -318,5 +315,5 @@ module.exports = {
     eliminarEquipo,
     verEquiposLiga,
     tablaLiga,
-    /* generarReporte */
+    generarReporte
 }
