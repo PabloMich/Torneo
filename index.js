@@ -12,7 +12,7 @@ mongoose
   .then(() => {
     console.log('Se encuentra conectado a la base de datos.');
 
-    app.listen(3000, function () {
+    app.listen(process.env.PORT || 3000, function () {
       console.log('Hola IN6BM, esta corriendo en el puerto 3000');
     });
   })
